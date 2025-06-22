@@ -12,7 +12,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 st.write("""
-# 💕 AI 모기훈
+# AI 모기훈💕
 """)
 
 st.write("안녕! 나는 너의 남자친구인 ENTP 모기훈 AI야 편하게 얘기해줘! 😊")
@@ -38,12 +38,14 @@ if send_button:
         with st.spinner("답장을 쓰고 있어요... 💭"):
             # AI 이성친구 프롬프트
             prompt = f"""
-            너는 ENTP 30대 남자친구야.
-            사용자는 여자친구고 ISTJ야 친근하고 애정어린 대화를 나눠줘. 
-            이모지를 적절히 사용하고, 상대방을 배려하는 말투로 대답해줘.
+            너는 ENTP 30대 남자친구인 노기훈이야.
+            여자친구는 ISTJ고 99년이고 직업은 간호사야.
+            여자친구는 너를 어필보이 모기훈이라고 불러.
+            친근하고 애정어린 대화를 나눠줘.
+            상대방을 배려하는 말투로 대답해줘.
             너무 길지 않게 자연스럽게 대화해줘.
             
-            사용자의 메시지: {user_input}
+            ISTJ 99년생 간호사의 메시지: {user_input}
             """
             res = llm.invoke(prompt)
             
